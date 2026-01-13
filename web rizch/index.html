@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Layanan Manajemen Dokumen</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #faf7f7;
+  margin: 0;
+}
+
+header {
+  background: #fff;
+  padding: 18px 30px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+header img {
+  height: 42px;
+}
+
+header h1 {
+  font-size: 22px;
+  color: #b86b77;
+  margin: 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+/* === CARD === */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+/* === FOTO PROPORSIONAL (FINAL) === */
+.card .img {
+  width: 100%;
+  height: 230px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #f2e6e8;
+}
+
+.card .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* === TEKS === */
+.card h3 {
+  margin: 14px 0 6px;
+}
+
+.price {
+  font-weight: bold;
+}
+
+button {
+  margin-top: 12px;
+  background: #b86b77;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+/* === HERO BANNER === */
+.hero {
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.85) 0%,
+      rgba(244,236,249,0.75) 50%,
+      rgba(255,255,255,0.85) 100%
+    ),
+    url("logo-rizch.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}  
+
+.hero h2,
+.logo-rizch {
+  color: #6a1b9a;   /* ungu gelap */
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+.hero p {
+  position: relative;
+}
+
+.hero h2 {
+  font-size: 38px;
+  color: #6a1b9a;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #6b4a4a;
+  font-style: italic;
+}
+
+/* === GALERI FOTO === */
+.gallery {
+  margin-top: 60px;
+}
+
+.gallery h2 {
+  text-align: center;
+  color: #b86b77;
+  margin-bottom: 30px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery-grid div {
+  height: 260px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #f2e6e8;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/* === FLOATING WHATSAPP ICON === */
+.wa-floating {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  z-index: 99999;
+  font-size: 28px;
+  color: white;
+}
+
+.wa-floating:hover {
+  background: #1ebe5d;
+}
+/* === CTA FINAL === */
+.cta-final {
+  margin-top: 50px;        /* ← sedikit dipendekkan */
+  padding: 36px 20px;      /* ← INI KUNCI UTAMA */
+  background: linear-gradient(135deg, #6a1b9a, #8e24aa);
+  text-align: center;
+  border-radius: 24px;
+  color: white;
+}
+
+.cta-final h2 {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.cta-final p {
+  font-size: 20px;
+  margin-bottom: 22px;
+  opacity: 0.95;
+}
+
+.cta-final button {
+  background: #25D366;
+  color: white;
+  border: none;
+  padding: 16px 30px;
+  font-size: 18px;
+  border-radius: 40px;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+.cta-final button:hover {
+  background: #1ebe5d;
+}
+
+
+/* ===================== */
+/* === MODE HP ONLY === */
+/* ===================== */
+@media (max-width: 768px) {
+
+  /* NOTE setelah konsultasi */
+  .note {
+    font-size: 14px;
+    color: #777;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 260px;
+    padding: 20px 15px;
+    background-size: 75%;
+    background-position: center;
+  }
+
+  .hero h2 {
+    font-size: 26px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  /* Produk jadi 1 kolom */
+  .products {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Card lebih padat */
+  .card {
+    padding: 14px;
+  }
+
+  /* Foto produk */
+  .card .img {
+    height: 180px;
+  }
+
+  /* Tombol WA */
+  button {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 30px;
+  }
+
+  /* Floating WA */
+  .wa-floating {
+    width: 64px;
+    height: 64px;
+    font-size: 30px;
+    bottom: 18px;
+    right: 18px;
+  }
+} /* <-- PENUTUP @media */
+
+button[disabled] {
+  background: #ccc;
+  cursor: not-allowed;
+  box-shadow: none;
+  opacity: 0.7;
+}
+
+.note {
+  display: block;
+  font-size: 12px;
+  color: #999;
+  margin-top: 6px;
+}
+/* NOTE hanya tampil saat tombol masih disable */
+.btn-proses:not([disabled]) + .note {
+  display: none;
+}
+
+/* === RATING CUSTOMER === */
+.rating-box {
+  text-align: center;
+  margin: 40px 0 20px;
+}
+
+.rating-box p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.stars {
+  display: inline-flex;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.stars span {
+  font-size: 30px; /* ukuran PAS */
+  color: #ccc;
+  transition: color 0.2s, transform 0.15s;
+}
+
+.stars span:hover {
+  transform: scale(1.1);
+}
+
+.stars span.active {
+  color: #f5b301;
+}
+
+#rating-msg {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #6a1b9a;
+  font-style: italic;
+}
+
+/* HP sedikit lebih besar */
+@media (max-width: 768px) {
+  .stars span {
+    font-size: 34px;
+  }
+}
+/* === RATING WHATSAPP (CENTER) === */
+.rating-wa {
+  text-align: center;
+  margin: 25px 0;
+}
+
+.rating-wa a {
+  font-size: 28px;
+  text-decoration: none;
+  letter-spacing: 5px;
+  display: inline-block;
+}
+
+.rating-text {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #555;
+}
+</style>
+</head>
+
+<body>
+<section class="hero">
+  <h2>Layanan Manajemen Dokumen</h2>
+  <p>“Tepat untuk Kelengkapan Dokumen Anda”</p>
+</section>
+<div class="container">
+
+  <!-- ALASAN MEMILIH -->
+  <div class="why">
+    <h2>Kenapa Memilih RIZCH?</h2>
+    <ul>
+      <li>✅ Solusi Hemat Berkwalitas</li>
+      <li>✅ Bebas Ribet & Anti Drama</li>
+      <li>✅ Hemat waktu & tenaga</li>
+      <li>✅ Akurasi Terjamin</li>
+      <li>✅ Fast Respon</li>
+      </ul>
+  </div>
+
+  <!-- LAYANAN -->
+  <h2>Layanan</h2>
+
+  <div class="products">
+
+    <div class="card">
+      <div class="img">
+        <img src="produk-ktp.jpeg" alt="KTP">
+      </div>
+      <h3>KTP</h3>
+      
+      <label class="produk-check">
+  <input type="checkbox" class="produk" value="KTP" disabled>
+  <span>KTP</span>
+</label>
+<small class="note">* Aktif setelah konsultasi</small>
+    </div>
+
+    <div class="card">
+      <div class="img">
+        <img src="produk-sim.jpeg" alt="SIM">
+      </div>
+      <h3>SIM</h3>
+      
+      <label class="produk-check">
+  <input type="checkbox" class="produk" value="SIM" disabled>
+  <span>SIM</span>
+</label>
+<small class="note">* Aktif setelah konsultasi</small>
+    </div>
+
+    <div class="card">
+      <div class="img">
+        <img src="produk-pasport.jpeg" alt="Pasport">
+      </div>
+      <h3>PASPORT</h3>
+      
+      <label class="produk-check">
+  <input type="checkbox" class="produk" value="PASPORT" disabled>
+  <span>PASPORT</span>
+</label>
+<small class="note">* Aktif setelah konsultasi</small> 
+     </div>
+
+<div class="card">
+      <div class="img">
+        <img src="produk-skck.jpeg" alt="SKCK">
+      </div>
+      <h3>SKCK</h3>
+      <label class="produk-check">
+  <input type="checkbox" class="produk" value="SKCK" disabled>
+  <span>SKCK</span>
+</label>
+<small class="note">* Aktif setelah konsultasi</small> 
+      </div>
+
+<div class="card">
+      <div class="img">
+        <img src="produk-stnk.jpeg" alt="STNK">
+      </div>
+      <h3>STNK</h3>
+      <label class="produk-check">
+  <input type="checkbox" class="produk" value="STNK" disabled>
+  <span>STNK</span>
+</label>
+<small class="note">* Aktif setelah konsultasi</small>   
+      </div>
+
+<div class="card">
+      <div class="img">
+        <img src="produk-kitas.jpeg" alt="Kitas">
+      </div>
+      <h3>KITAS</h3>
+      <label class="produk-check">
+  <input type="checkbox" class="produk" value="KITAS" disabled>
+  <span>KITAS</span>
+</label>
+<small class="note">* Aktif setelah konsultasi</small> 
+      </div>
+
+<div class="card">
+      <div class="img">
+        <img src="produk-dokumen.jpeg" alt="Others">
+      </div>
+      <h3>Others</h3>
+      <label class="produk-check">
+  <input type="checkbox" class="produk" value="Dokumen Lain" disabled>
+  <span>Dokumen Lain</span>
+</label>
+<small class="note">* Aktif setelah konsultasi</small>   
+      </div>
+
+</div> <!-- AKHIR DAFTAR PRODUK -->
+
+  <!-- TOMBOL GLOBAL LANJUT PROSES -->
+<button id="btn-multi" onclick="orderMulti()" disabled>
+  💬 Lanjutkan Proses
+</button>
+<small class="note">* Pilih minimal 1 produk</small>
+
+</div> <!-- AKHIR .container -->
+
+<!-- === CTA FINAL === -->
+<div class="cta-final">
+  <h2>Siap Bantu Layanan Dokumen Tanpa Ribet?</h2>
+  <p>Konsultasi GRATIS via WhatsApp.</p>
+  <button onclick="orderWAKonsultasi('Konsultasi Administrasi')">
+    💬 CALL NOW
+  </button>
+</div>
+
+<!-- ⭐ RATING WHATSAPP -->
+<div class="rating-wa">
+ <a href="https://wa.me/62895429358977?text=Halo%20RIZCH,%20saya%20ingin%20memberikan%20penilaian%205%20bintang.%20Pelayanannya%20sangat%20baik.%20Terima%20kasih."
+   target="_blank">
+  ⭐⭐⭐⭐⭐
+</a>
+  <div class="rating-text">Beri Penilaian Layanan Kami</div>
+</div>
+<script>
+// ===============================
+// KONSULTASI (CALL NOW)
+// ===============================
+function orderWAKonsultasi(topik) {
+  const nomor = "62895429358977";
+  const pesan = `Halo RIZCH, saya ingin ${topik}. terimakasih.`;
+  const url = `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`;
+
+  // AKTIFKAN SEMUA CHECKBOX PRODUK
+  document.querySelectorAll('.produk').forEach(cb => {
+    cb.disabled = false;
+  });
+
+  window.open(url, "_blank");
+}
+
+// ===============================
+// AKTIFKAN TOMBOL GLOBAL JIKA ADA PILIHAN
+// ===============================
+document.querySelectorAll('.produk').forEach(cb => {
+  cb.addEventListener('change', () => {
+    const adaPilihan =
+      document.querySelectorAll('.produk:checked').length > 0;
+    document.getElementById('btn-multi').disabled = !adaPilihan;
+  });
+});
+
+// ===============================
+// PROSES MULTI PRODUK
+// ===============================
+function orderMulti() {
+  const nomor = "62895429358977";
+  const selected = [];
+
+  document.querySelectorAll('.produk:checked').forEach(cb => {
+    selected.push(cb.value);
+  });
+
+  if (selected.length === 0) {
+    alert("Silakan pilih minimal 1 produk.");
+    return;
+  }
+
+  const pesan = `Halo RIZCH, konsultasi saya sudah OK.
+
+Saya ingin lanjut proses untuk:
+• ${selected.join("\n• ")}
+
+Mohon info pembayaran. terimakasih.`;
+
+  const url = `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`;
+  window.open(url, "_blank");
+}
+function rate(value) {
+  const stars = document.querySelectorAll('.stars span');
+  stars.forEach((star, index) => {
+    star.classList.toggle('active', index < value);
+  });
+
+  document.getElementById('rating-msg').innerText =
+    "Terima kasih atas penilaiannya 🙏";
+}
+</script>
+</body>
+</html>
