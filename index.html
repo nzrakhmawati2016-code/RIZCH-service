@@ -3,7 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
-<title>Layanan Manajemen Dokumen</title>
+<title>Layanan Managemen Dokumen </title>
 
 <style>
 body {
@@ -84,51 +84,6 @@ button {
   padding: 10px 18px;
   border-radius: 20px;
   cursor: pointer;
-}
-/* === HERO BANNER === */
-.hero {
-  position: relative;
-  min-height: 420px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 40px 20px;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(255,255,255,0.85) 0%,
-      rgba(244,236,249,0.75) 50%,
-      rgba(255,255,255,0.85) 100%
-    ),
-    url("logo-rizch.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}  
-
-.hero h2,
-.logo-rizch {
-  color: #6a1b9a;   /* ungu gelap */
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.15);
-}
-.hero p {
-  position: relative;
-}
-
-.hero h2 {
-  font-size: 38px;
-  color: #6a1b9a;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 18px;
-  color: #6b4a4a;
-  font-style: italic;
 }
 
 /* === GALERI FOTO === */
@@ -229,22 +184,6 @@ button {
   .note {
     font-size: 14px;
     color: #777;
-  }
-
-  /* HERO */
-  .hero {
-    min-height: 260px;
-    padding: 20px 15px;
-    background-size: 75%;
-    background-position: center;
-  }
-
-  .hero h2 {
-    font-size: 26px;
-  }
-
-  .hero p {
-    font-size: 14px;
   }
 
   /* Produk jadi 1 kolom */
@@ -363,12 +302,77 @@ button[disabled] {
   font-size: 14px;
   color: #555;
 }
+
+/* ===== VERSI HP ===== */
+@media (max-width: 768px) {
+ 
+}
+
+/* KHUSUS HP */
+@media (max-width: 768px) {
+  
+}
+
+/* ============================== */
+/* === HERO PALING AMAN & RAPI === */
+/* ============================== */
+
+.hero {
+  text-align: center;
+  padding: 28px 16px 18px;
+}
+
+/* LOGO BESAR & CENTER */
+.hero-logo {
+  display: block;
+  margin: 0 auto 10px;
+  width: 240px;       /* BESAR tapi aman */
+  max-width: 90%;
+  height: auto;
+  background: none;   /* pastikan bukan kotak CSS */
+}
+
+/* JUDUL */
+.hero h2 {
+  font-size: 26px;
+  color: #6a1b9a;
+  margin: 6px 0;
+}
+
+/* TAGLINE */
+.hero p {
+  font-size: 15px;
+  font-style: italic;
+  color: #555;
+  margin: 0;
+}
+
+/* ===== MODE HP ===== */
+@media (max-width: 768px) {
+  .hero {
+    padding: 20px 14px;
+  }
+
+  .hero-logo {
+    width: 180px;
+  }
+
+  .hero h2 {
+    font-size: 20px;
+  }
+
+  .hero p {
+    font-size: 13px;
+  }
+}
+
 </style>
 </head>
 
 <body>
 <section class="hero">
-  <h2>Layanan Manajemen Dokumen</h2>
+  <img src="logo-rizch.png" alt="RIZCH" class="hero-logo">
+  <h2>Layanan Managemen Dokumen</h2>
   <p>“Tepat untuk Kelengkapan Dokumen Anda”</p>
 </section>
 <div class="container">
@@ -377,9 +381,9 @@ button[disabled] {
   <div class="why">
     <h2>Kenapa Memilih RIZCH?</h2>
     <ul>
-      <li>✅ Solusi Hemat Berkwalitas</li>
+      <li>✅ Solusi Hemat Biaya & Berkwalitas</li>
       <li>✅ Bebas Ribet & Anti Drama</li>
-      <li>✅ Hemat waktu & tenaga</li>
+      <li>✅ Hemat Waktu & Tenaga</li>
       <li>✅ Akurasi Terjamin</li>
       <li>✅ Fast Respon</li>
       </ul>
@@ -392,9 +396,9 @@ button[disabled] {
 
     <div class="card">
       <div class="img">
-        <img src="produk-ktp.jpeg" alt="KTP">
+        <img src="produk-ktp.jpeg" alt="KTP (Pendampingan)">
       </div>
-      <h3>KTP</h3>
+      <h3>KTP (Pendampingan)</h3>
       
       <label class="produk-check">
   <input type="checkbox" class="produk" value="KTP" disabled>
@@ -405,9 +409,9 @@ button[disabled] {
 
     <div class="card">
       <div class="img">
-        <img src="produk-sim.jpeg" alt="SIM">
+        <img src="produk-sim.jpeg" alt="SIM (Pendampingan)">
       </div>
-      <h3>SIM</h3>
+      <h3>SIM (Pendampingan)</h3>
       
       <label class="produk-check">
   <input type="checkbox" class="produk" value="SIM" disabled>
@@ -418,9 +422,9 @@ button[disabled] {
 
     <div class="card">
       <div class="img">
-        <img src="produk-pasport.jpeg" alt="Pasport">
+        <img src="produk-pasport.jpeg" alt="PASPORT (Pendampingan)">
       </div>
-      <h3>PASPORT</h3>
+      <h3>PASPORT (Pendampingan)</h3>
       
       <label class="produk-check">
   <input type="checkbox" class="produk" value="PASPORT" disabled>
@@ -431,9 +435,9 @@ button[disabled] {
 
 <div class="card">
       <div class="img">
-        <img src="produk-skck.jpeg" alt="SKCK">
+        <img src="produk-skck.jpeg" alt="SKCK (Pendampingan)">
       </div>
-      <h3>SKCK</h3>
+      <h3>SKCK (Pendampingan)</h3>
       <label class="produk-check">
   <input type="checkbox" class="produk" value="SKCK" disabled>
   <span>SKCK</span>
@@ -443,9 +447,9 @@ button[disabled] {
 
 <div class="card">
       <div class="img">
-        <img src="produk-stnk.jpeg" alt="STNK">
+        <img src="produk-stnk.jpeg" alt="STNK (Pendampingan)">
       </div>
-      <h3>STNK</h3>
+      <h3>STNK (Pendampingan)</h3>
       <label class="produk-check">
   <input type="checkbox" class="produk" value="STNK" disabled>
   <span>STNK</span>
@@ -455,12 +459,12 @@ button[disabled] {
 
 <div class="card">
       <div class="img">
-        <img src="produk-kitas.jpeg" alt="Kitas">
+        <img src="produk-kitas.jpeg" alt="KITAS/KITAP (Pendampingan)">
       </div>
-      <h3>KITAS</h3>
+      <h3>KITAS/KITAP (Pendampingan)</h3>
       <label class="produk-check">
-  <input type="checkbox" class="produk" value="KITAS" disabled>
-  <span>KITAS</span>
+  <input type="checkbox" class="produk" value="KITAS/KITAP" disabled>
+  <span>KITAS/KITAP</span>
 </label>
 <small class="note">* Aktif setelah konsultasi</small> 
       </div>
@@ -481,9 +485,9 @@ button[disabled] {
 
   <!-- TOMBOL GLOBAL LANJUT PROSES -->
 <button id="btn-multi" onclick="orderMulti()" disabled>
-  💬 Lanjutkan Proses
+   Lanjutkan Proses
 </button>
-<small class="note">* Pilih minimal 1 produk</small>
+<small class="note">* Pilih Produk</small>
 
 </div> <!-- AKHIR .container -->
 
@@ -492,13 +496,13 @@ button[disabled] {
   <h2>Siap Bantu Layanan Dokumen Tanpa Ribet?</h2>
   <p>Konsultasi GRATIS via WhatsApp.</p>
   <button onclick="orderWAKonsultasi('Konsultasi Administrasi')">
-    💬 CALL NOW
+     CALL NOW
   </button>
 </div>
 
 <!-- ⭐ RATING WHATSAPP -->
 <div class="rating-wa">
- <a href="https://wa.me/62895429358977?text=Halo%20RIZCH,%20saya%20ingin%20memberikan%20penilaian%205%20bintang.%20Pelayanannya%20sangat%20baik.%20Terima%20kasih."
+ <a href="https://wa.me/62895429358977?text=Saya%20ingin%20memberikan%20penilaian%205%20bintang.%20Pelayanannya%20sangat%20baik.%20Terimakasih."
    target="_blank">
   ⭐⭐⭐⭐⭐
 </a>
@@ -545,7 +549,7 @@ function orderMulti() {
 
   if (selected.length === 0) {
     alert("Silakan pilih minimal 1 produk.");
-    return;
+   
   }
 
   const pesan = `Halo RIZCH, konsultasi saya sudah OK.
@@ -557,15 +561,6 @@ Mohon info pembayaran. terimakasih.`;
 
   const url = `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`;
   window.open(url, "_blank");
-}
-function rate(value) {
-  const stars = document.querySelectorAll('.stars span');
-  stars.forEach((star, index) => {
-    star.classList.toggle('active', index < value);
-  });
-
-  document.getElementById('rating-msg').innerText =
-    "Terima kasih atas penilaiannya 🙏";
 }
 </script>
 </body>
