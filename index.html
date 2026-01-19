@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Layanan Manajemen Dokumen </title>
+<meta name="description" content="Layanan pendampingan dan konsultasi administrasi dokumen seperti KTP, SIM, Paspor, SKCK, STNK, KITAS/KITAP. Konsultasi gratis via WhatsApp.">
 
 <style>
 body {
@@ -303,15 +304,6 @@ button[disabled] {
   color: #555;
 }
 
-/* ===== VERSI HP ===== */
-@media (max-width: 768px) {
- 
-}
-
-/* KHUSUS HP */
-@media (max-width: 768px) {
-  
-}
 
 /* ============================== */
 /* === HERO PALING AMAN & RAPI === */
@@ -484,7 +476,7 @@ button[disabled] {
 </div> <!-- AKHIR DAFTAR PRODUK -->
 
   <!-- TOMBOL GLOBAL LANJUT PROSES -->
-<button id="btn-multi" onclick="orderMulti()" disabled>
+<button id="btn-multi" class="btn-proses" onclick="orderMulti()" disabled>
    Lanjutkan Proses
 </button>
 <small class="note">* Pilih Produk</small>
@@ -510,15 +502,15 @@ button[disabled] {
 </div>
 <script>
 // ===============================
-// KONSULTASI (CALL NOW)
+// CALL NOW / KONSULTASI
 // ===============================
 function orderWAKonsultasi(topik) {
   const nomor = "62895429358977";
-  const pesan = `Halo RIZCH, saya ingin ${topik}. terimakasih.`;
-  const url = `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`;
+  const pesan = "Halo RIZCH, saya ingin " + topik + ". Terimakasih.";
+  const url = "https://wa.me/" + nomor + "?text=" + encodeURIComponent(pesan);
 
-  // AKTIFKAN SEMUA CHECKBOX PRODUK
-  document.querySelectorAll('.produk').forEach(cb => {
+  // Aktifkan semua checkbox produk setelah konsultasi
+  document.querySelectorAll('.produk').forEach(function(cb) {
     cb.disabled = false;
   });
 
@@ -526,42 +518,43 @@ function orderWAKonsultasi(topik) {
 }
 
 // ===============================
-// AKTIFKAN TOMBOL GLOBAL JIKA ADA PILIHAN
-// ===============================
-document.querySelectorAll('.produk').forEach(cb => {
-  cb.addEventListener('change', () => {
-    const adaPilihan =
-      document.querySelectorAll('.produk:checked').length > 0;
-    document.getElementById('btn-multi').disabled = !adaPilihan;
-  });
-});
-
-// ===============================
-// PROSES MULTI PRODUK
+// LANJUT PROSES (MULTI PRODUK)
 // ===============================
 function orderMulti() {
   const nomor = "62895429358977";
   const selected = [];
 
-  document.querySelectorAll('.produk:checked').forEach(cb => {
+  document.querySelectorAll('.produk:checked').forEach(function(cb) {
     selected.push(cb.value);
   });
 
+  // Jika belum pilih produk → STOP
   if (selected.length === 0) {
     alert("Silakan pilih minimal 1 produk.");
-   
+    return;
   }
 
-  const pesan = `Halo RIZCH, konsultasi saya sudah OK.
+  const pesan =
+`Halo RIZCH, konsultasi saya sudah OK.
 
 Saya ingin lanjut proses untuk:
 • ${selected.join("\n• ")}
 
-Mohon info pembayaran. terimakasih.`;
+Mohon info pembayaran. Terimakasih.`;
 
-  const url = `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`;
+  const url = "https://wa.me/" + nomor + "?text=" + encodeURIComponent(pesan);
   window.open(url, "_blank");
 }
+
+// ===============================
+// AKTIFKAN TOMBOL JIKA ADA PILIHAN
+// ===============================
+document.querySelectorAll('.produk').forEach(function(cb) {
+  cb.addEventListener('change', function() {
+    const adaPilihan = document.querySelectorAll('.produk:checked').length > 0;
+    document.getElementById('btn-multi').disabled = !adaPilihan;
+  });
+});
 </script>
 <!-- ================= FOOTER PROFESIONAL ================= -->
 <footer style="
