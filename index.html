@@ -591,9 +591,9 @@ Dokumen dapat dipilih setelah konsultasi via WhatsApp.
 <div class="cta-final">
   <h2>Siap Bantu Layanan Dokumen Tanpa Ribet?</h2>
   <p>Konsultasi GRATIS via WhatsApp.</p>
-  <button onclick="orderWAKonsultasi('konsultasi dan pendampingan dokumen')">
-  Mulai Konsultasi Sekarang
-</button>
+  <button onclick="orderWAKonsultasi('konsultasi dan ingin melanjutkan proses dokumen')">
+    Lanjutkan Proses Dokumen
+  </button>
 
 <div class="cta-trust">
     <br>
@@ -615,7 +615,7 @@ Dokumen dapat dipilih setelah konsultasi via WhatsApp.
 // ===============================
 function orderWAKonsultasi(topik) {
   const nomor = "62895429358977";
-  const pesan = "Halo RIZCH, saya ingin " + topik + ". Terimakasih.";
+  const pesan = "Halo RIZCH, saya sudah " + topik + ". Terimakasih.";
   const url = "https://wa.me/" + nomor + "?text=" + encodeURIComponent(pesan);
 
   // Aktifkan semua checkbox produk setelah konsultasi
@@ -644,8 +644,7 @@ function orderMulti() {
   }
 
   const pesan =
-`Halo RIZCH, konsultasi saya sudah OK.
-
+`Halo RIZCH, 
 Saya ingin lanjut proses untuk:
 • ${selected.join("\n• ")}
 
