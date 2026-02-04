@@ -485,20 +485,20 @@ button[disabled] {
   <!-- LAYANAN -->
   <h2>Pilih Dokumen untuk Dilanjutkan</h2>
 <p class="note">
-Dokumen dapat dipilih setelah konsultasi via WhatsApp.
+Dokumen dapat dipilih setelah lanjutkan proses dokumen.
 </p>
 
   <div class="products">
 
     <div class="card">
       <div class="img">
-        <img src="produk-ktp.jpeg" alt="KTP (Pendampingan)">
+        <img src="produk-skck.jpeg" alt="SKCK (Pendampingan)">
       </div>
-      <h3>KTP (Pendampingan)</h3>
+      <h3>SKCK (Pendampingan)</h3>
       
       <label class="produk-check">
-  <input type="checkbox" class="produk" value="KTP" disabled>
-  <span>KTP</span>
+  <input type="checkbox" class="produk" value="SKCK" disabled>
+  <span>SKCK</span>
 </label>
 <small class="note">* Aktif setelah konsultasi</small>
     </div>
@@ -531,12 +531,12 @@ Dokumen dapat dipilih setelah konsultasi via WhatsApp.
 
 <div class="card">
       <div class="img">
-        <img src="produk-skck.jpeg" alt="SKCK (Pendampingan)">
+        <img src="produk-ktp.jpeg" alt="KTP (Pendampingan)">
       </div>
-      <h3>SKCK (Pendampingan)</h3>
+      <h3>KTP (Pendampingan)</h3>
       <label class="produk-check">
-  <input type="checkbox" class="produk" value="SKCK" disabled>
-  <span>SKCK</span>
+  <input type="checkbox" class="produk" value="KTP" disabled>
+  <span>KTP</span>
 </label>
 <small class="note">* Aktif setelah konsultasi</small> 
       </div>
@@ -581,7 +581,7 @@ Dokumen dapat dipilih setelah konsultasi via WhatsApp.
 
   <!-- TOMBOL GLOBAL LANJUT PROSES -->
 <button id="btn-multi" class="btn-proses" onclick="orderMulti()" disabled>
-   Lanjutkan Proses
+   proses sekarang
 </button>
 <small class="note">* Pilih Produk</small>
 
@@ -645,7 +645,7 @@ function orderMulti() {
 
   const pesan =
 `Halo RIZCH, 
-Saya ingin lanjut proses untuk:
+Tolong proses untuk:
 • ${selected.join("\n• ")}
 
 Mohon info pembayaran. Terimakasih.`;
