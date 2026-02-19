@@ -3,707 +3,336 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rizch - Layanan Pendampingan Dokumen Pribadi yang Aman & Terpercaya </title>
+
+<title>Biro Jasa Dokumen Bali – Rizch Pendampingan SIM, SKCK, KITAS & Paspor</title>
+
 <meta name="description"
-content="RIZCH menyediakan layanan pendampingan dan konsultasi dokumen pribadi seperti SIM, SKCK, KITAS/KITAP, KTP, KK, Paspor, dan dokumen pendukung lainnya. Untuk WNI & WNA. Konsultasi gratis via WhatsApp.">
-<meta name="keywords" content="biro jasa dokumen, pengurusan SIM, jasa KITAS/KITAP, pengurusan SKCK, jasa pasport, pengurusan KTP, pengurusan STNK, Rizch dokumen">
-<meta property="og:title" content="Rizch - Pendampingan Dokumen Pribadi"> 
-<meta property="og:description" content="Solusi urus dokumen pribadi tanpa ribet, Aman dan Terpercaya.">
+content="RIZCH menyediakan layanan pendampingan dokumen seperti SIM, SKCK, KITAS/KITAP, KTP, STNK dan Paspor di Bali. Aman & terpercaya. Konsultasi gratis via WhatsApp.">
+
+<meta property="og:title" content="Biro Jasa Dokumen Bali – RIZCH">
+<meta property="og:description" content="Pendampingan dokumen pribadi aman & terpercaya di Bali. Konsultasi gratis via WhatsApp.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://rizch-service.vercel.app/logo-rizch.png">
-<meta property="og:url" content="https://rizch-service.vercel.app/">
-<meta property="og:site_name" content="RIZCH Dokumen">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Rizch - Pendampingan Dokumen Pribadi">
-<meta name="twitter:description" content="Solusi urus dokumen pribadi tanpa ribet. Aman & Terpercaya.">
-<meta name="twitter:image" content="https://rizch-service.vercel.app/logo-rizch.png">
 
 <style>
-body {
-  font-family: Arial, sans-serif;
-  background: #faf7f7;
-  margin: 0;
+body{
+  font-family:Arial, sans-serif;
+  margin:0;
+  background:#faf7f7;
 }
 
-header {
-  background: #fff;
-  padding: 18px 30px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  border-bottom: 1px solid #eee;
+h1, h2, h3, p{
+  margin-top:8px;
+  margin-bottom:8px;
 }
 
-header img {
-  height: 42px;
+/* HERO */
+.hero{
+  text-align:center;
+  padding:35px 20px 15px;
 }
 
-header h1 {
-  font-size: 22px;
-  color: #b86b77;
-  margin: 0;
+.hero-logo{
+  width:220px;
+  max-width:90%;
 }
 
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 30px 20px;
+.hero h1{
+  margin-top:15px;
 }
 
-.products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
+.hero h2{
+  font-size:22px;
+  color:#6a1b9a;
+  margin:10px 0;
 }
 
-/* === CARD === */
-.card {
-  background: #fff;
-  border-radius: 16px;
-  padding: 16px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+.hero p{
+  color:#555;
+  font-style:italic;
 }
 
-/* === FOTO PROPORSIONAL (FINAL) === */
-.card .img {
-  width: 100%;
-  height: 230px;
-  border-radius: 14px;
-  overflow: hidden;
-  background: #f2e6e8;
+.cta-wa{
+  display:inline-block;
+  margin-top:20px;
+  background:#25D366;
+  color:white;
+  padding:14px 28px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
 }
 
-.card .img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+/* CONTAINER */
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:30px 20px;
 }
 
-/* === TEKS === */
-.card h3 {
-  margin: 14px 0 6px;
+/* TRUST SECTION */
+.trust{
+  padding:25px 0;
+  margin-bottom:25px;
 }
 
-.price {
-  font-weight: bold;
+.trust h2{
+  text-align:center;
+  margin-bottom:20px;
+  color:#6a1b9a;
 }
 
-button {
-  margin-top: 12px;
-  background: #b86b77;
-  color: white;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 20px;
-  cursor: pointer;
+.trust ul{
+  list-style:none;
+  padding:0;
+  line-height:1.9;
+  max-width:700px;
+  margin:0 auto;
+}
+.trust ul li{
+  margin-bottom:6px;
 }
 
-/* === GALERI FOTO === */
-.gallery {
-  margin-top: 60px;
+/* PRODUCTS */
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+  gap:25px;
 }
 
-.gallery h2 {
-  text-align: center;
-  color: #b86b77;
-  margin-bottom: 30px;
+.card{
+  background:white;
+  padding:16px;
+  border-radius:16px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.06);
 }
 
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+.card .img{
+  height:200px;
+  overflow:hidden;
+  border-radius:14px;
 }
 
-.gallery-grid div {
-  height: 260px;
-  border-radius: 16px;
-  overflow: hidden;
-  background: #f2e6e8;
+.card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
 }
 
-.gallery-grid img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+.card h3{
+  margin-top:15px;
 }
-/* === FLOATING WHATSAPP ICON === */
+
+.card button{
+  margin-top:10px;
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:25px;
+  background:#6a1b9a;
+  color:white;
+  cursor:pointer;
+}
+
+.card button:hover{
+  opacity:0.9;
+}
+
+/* CTA FINAL */
+.cta-final{
+  margin:40px 20px;
+  padding:40px 20px;
+  background:linear-gradient(135deg,#6a1b9a,#8e24aa);
+  text-align:center;
+  border-radius:20px;
+  color:white;
+}
+
+.cta-final button{
+  margin-top:20px;
+  padding:14px 30px;
+  border:none;
+  border-radius:30px;
+  background:#25D366;
+  color:white;
+  cursor:pointer;
+}
+
+.wa-floating{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:26px;
+  text-decoration:none;
+  box-shadow:0 6px 15px rgba(0,0,0,0.3);
+  z-index:999;
+}
+.wa-floating img{
+  width:28px;
+  height:28px;
+}
+.wa-floating:hover{
+  transform:scale(1.08);
+  transition:0.2s ease;
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
 .wa-floating {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 60px;
-  height: 60px;
-  background: #25D366;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-  z-index: 99999;
-  font-size: 28px;
-  color: white;
+  animation: pulse 2s infinite;
 }
 
-.wa-floating:hover {
-  background: #1ebe5d;
-}
-/* === CTA FINAL === */
-.cta-final {
-  margin-top: 50px;        /* ← sedikit dipendekkan */
-  padding: 36px 20px;      /* ← INI KUNCI UTAMA */
-  background: linear-gradient(135deg, #6a1b9a, #8e24aa);
-  text-align: center;
-  border-radius: 24px;
-  color: white;
-}
-
-.cta-final h2 {
-  font-size: 30px;
-  margin-bottom: 12px;
-}
-
-.cta-final p {
-  font-size: 20px;
-  margin-bottom: 22px;
-  opacity: 0.95;
-}
-
-.cta-final button {
-  background: #25D366;
-  color: white;
-  border: none;
-  padding: 16px 30px;
-  font-size: 18px;
-  border-radius: 40px;
-  cursor: pointer;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-}
-
-.cta-final button:hover {
-  background: #1ebe5d;
-}
-
-
-/* ===================== */
-/* === MODE HP ONLY === */
-/* ===================== */
-@media (max-width: 768px) {
-
-  /* NOTE setelah konsultasi */
-  .note {
-    font-size: 14px;
-    color: #777;
-  }
-
-  /* Produk jadi 1 kolom */
-  .products {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  /* Card lebih padat */
-  .card {
-    padding: 14px;
-  }
-
-  /* Foto produk */
-  .card .img {
-    height: 180px;
-  }
-
-  /* Tombol WA */
-  button {
-    width: 100%;
-    padding: 14px;
-    font-size: 16px;
-    border-radius: 30px;
-  }
-
-  /* Floating WA */
-  .wa-floating {
-    width: 64px;
-    height: 64px;
-    font-size: 30px;
-    bottom: 18px;
-    right: 18px;
-  }
-} /* <-- PENUTUP @media */
-
-button[disabled] {
-  background: #ccc;
-  cursor: not-allowed;
-  box-shadow: none;
-  opacity: 0.7;
-}
-
-.note {
-  display: block;
-  font-size: 12px;
-  color: #999;
-  margin-top: 6px;
-}
-/* NOTE hanya tampil saat tombol masih disable */
-.btn-proses:not([disabled]) + .note {
-  display: none;
-}
-
-/* === RATING CUSTOMER === */
-.rating-box {
-  text-align: center;
-  margin: 40px 0 20px;
-}
-
-.rating-box p {
-  font-size: 16px;
-  margin-bottom: 10px;
-  color: #444;
-}
-
-.stars {
-  display: inline-flex;
-  gap: 8px;
-  cursor: pointer;
-}
-
-.stars span {
-  font-size: 30px; /* ukuran PAS */
-  color: #ccc;
-  transition: color 0.2s, transform 0.15s;
-}
-
-.stars span:hover {
-  transform: scale(1.1);
-}
-
-.stars span.active {
-  color: #f5b301;
-}
-
-#rating-msg {
-  display: block;
-  margin-top: 10px;
-  font-size: 14px;
-  color: #6a1b9a;
-  font-style: italic;
-}
-
-/* HP sedikit lebih besar */
-@media (max-width: 768px) {
-  .stars span {
-    font-size: 34px;
-  }
-}
-/* === RATING WHATSAPP (CENTER) === */
-.rating-wa {
-  text-align: center;
-  margin: 25px 0;
-}
-
-.rating-wa a {
-  font-size: 28px;
-  text-decoration: none;
-  letter-spacing: 5px;
-  display: inline-block;
-}
-
-.rating-text {
-  margin-top: 6px;
-  font-size: 14px;
-  color: #555;
-}
-
-
-/* ============================== */
-/* === HERO PALING AMAN & RAPI === */
-/* ============================== */
-
-.hero {
-  text-align: center;
-  padding: 28px 16px 18px;
-}
-
-/* LOGO BESAR & CENTER */
-.hero-logo {
-  display: block;
-  margin: 0 auto 10px;
-  width: 240px;       /* BESAR tapi aman */
-  max-width: 90%;
-  height: auto;
-  background: none;   /* pastikan bukan kotak CSS */
-}
-
-/* JUDUL */
-.hero h2 {
-  font-size: 26px;
-  color: #6a1b9a;
-  margin: 6px 0;
-}
-
-/* TAGLINE */
-.hero p {
-  font-size: 15px;
-  font-style: italic;
-  color: #555;
-  margin: 0;
-}
-
-/* ===== MODE HP ===== */
-@media (max-width: 768px) {
-  .hero {
-    padding: 20px 14px;
-  }
-
-  .hero-logo {
-    width: 180px;
-  }
-
-  .hero h2 {
-    font-size: 20px;
-  }
-
-  .hero p {
-    font-size: 13px;
-  }
-}
-/* =============================== */
-/* === SECTION LAYANAN KAMI === */
-/* =============================== */
-
-.services {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-.services h2 {
-  text-align: center;   /* judul saja yang center */
-  color: #6a1b9a;
-  margin-bottom: 30px;
-}
-
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
-}
-
-.service-card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 16px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-  text-align: left;   /* 🔑 INI YANG MEMBUAT RATA KIRI */
-}
-
-.service-card h3 {
-  margin-bottom: 6px;
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px 20px;
+  font-size:14px;
+  color:#555;
 }
 </style>
 </head>
 
 <body>
+
+<!-- HERO -->
 <section class="hero">
   <img src="logo-rizch.png" alt="RIZCH" class="hero-logo">
 
   <h1>Layanan Pendampingan Dokumen Pribadi yang Aman & Terpercaya</h1>
+  <h2>SIM • SKCK • KITAS • KITAP • KTP • STNK • Paspor</h2>
 
-  <h2>
-    SIM • SKCK • KITAS • KITAP • KTP • KK • Paspor<br>
-    Untuk WNI & WNA di Bali dan Indonesia
-  </h2>
+  <p>Proses jelas, pendampingan rapi, dan privasi terjaga.</p>
 
-  <p class="hero-tagline">
-  Proses jelas, pendampingan rapi, dan privasi terjaga.<br>
-  Clear process, professional assistance, and data privacy guaranteed.
-</p>
-
-<a
-  href="https://wa.me/62895429358977?text=Halo%20RIZCH,%20saya%20ingin%20konsultasi%20terkait%20dokumen%20pribadi.%20Terimakasih."
-  class="cta-wa"
-  target="_blank"
->
-  Free Consultation via WhatsApp
-</a>
+  <a href="https://wa.me/62895429358977?text=Halo%20RIZCH,%20saya%20ingin%20konsultasi."
+     class="cta-wa" target="_blank">
+     Chat Konsultasi Gratis
+  </a>
 </section>
-
-<!-- ================= LAYANAN RINGKAS ================= -->
-<section class="services">
-  <h2>📄 Layanan Kami</h2>
-
-  <div class="service-grid">
-
-  <div class="service-card">
-  <h3>SIM Indonesia (Driving License Assistance)</h3>
-    <p>
-    Jasa pembuatan & perpanjangan SIM untuk WNI & WNA
-  </p>
-  </div>
-
-  <div class="service-card">
-  <h3>SKCK (Police Clearance Assistance)</h3>
-    <p>
-    Untuk melamar kerja, visa, atau kebutuhan administrasi
-  </p>
-  </div>
-   
-    <div class="service-card">
-  <h3>KITAS / KITAP (Legal Stay Permit Assistance)</h3>
-    <p>
-    Pendampingan izin tinggal resmi bagi WNA di Indonesia
-  </p>
-  </div>
-
-    <div class="service-card">
-  <h3>Dokumen Pendukung (Additional Document)</h3>
-    <p>
-    KTP, KK, Paspor, dan dokumen pribadi lainnya
-  </p>
-  </div>
-
-  </div>
-</section>
-<!-- ================= END LAYANAN ================= -->
 
 <div class="container">
 
-  <!-- ALASAN MEMILIH -->
-  <div class="why">
+  <!-- TRUST SECTION -->
+  <div class="trust">
     <h2>Kenapa Memilih RIZCH?</h2>
     <ul>
-      <li>✅ Solusi Hemat Biaya & Berkualitas</li>
-      <li>✅ Proses Jelas & Transparan</li>
-      <li>✅ Hemat Waktu & Tenaga</li>
-      <li>✅ Akurasi Terjamin</li>
-      <li>✅ Respons Cepat & Komunikatif</li>
-      </ul>
+      <li>✅ Pendampingan hingga proses selesai</li>
+      <li>✅ Proses jelas & transparan</li>
+      <li>✅ Privasi data klien terjaga</li>
+      <li>✅ Respons cepat & komunikatif</li>
+      <li>✅ Berpengalaman menangani WNI & WNA</li>
+    </ul>
   </div>
 
-  <!-- LAYANAN -->
-  <h2>Pilih Dokumen untuk Dilanjutkan</h2>
-<p class="note">
-Dokumen dapat dipilih setelah lanjutkan proses dokumen.
-</p>
+  <!-- PRODUK -->
+  <h2>Pilih Layanan</h2>
 
-  <div class="products">
+<div class="products">
 
-    <div class="card">
-      <div class="img">
-        <img src="produk-skck.jpeg" alt="SKCK (Pendampingan)">
-      </div>
-      <h3>SKCK (Pendampingan)</h3>
-      
-      <label class="produk-check">
-  <input type="checkbox" class="produk" value="SKCK" disabled>
-  <span>SKCK</span>
-</label>
-<small class="note">* Aktif setelah konsultasi</small>
+  <div class="card">
+    <div class="img">
+      <img src="produk-skck.jpeg" alt="SKCK">
     </div>
+    <h3>SKCK</h3>
+    <button onclick="orderWA('SKCK')">Konsultasi SKCK</button>
+  </div>
 
-    <div class="card">
-      <div class="img">
-        <img src="produk-sim.jpeg" alt="SIM (Pendampingan)">
-      </div>
-      <h3>SIM (Pendampingan)</h3>
-      
-      <label class="produk-check">
-  <input type="checkbox" class="produk" value="SIM" disabled>
-  <span>SIM</span>
-</label>
-<small class="note">* Aktif setelah konsultasi</small>
+  <div class="card">
+    <div class="img">
+      <img src="produk-sim.jpeg" alt="SIM">
     </div>
+    <h3>SIM</h3>
+    <button onclick="orderWA('SIM')">Konsultasi SIM</button>
+  </div>
 
-    <div class="card">
-      <div class="img">
-        <img src="produk-pasport.jpeg" alt="PASPORT (Pendampingan)">
-      </div>
-      <h3>PASPORT (Pendampingan)</h3>
-      
-      <label class="produk-check">
-  <input type="checkbox" class="produk" value="PASPORT" disabled>
-  <span>PASPORT</span>
-</label>
-<small class="note">* Aktif setelah konsultasi</small> 
-     </div>
+  <div class="card">
+    <div class="img">
+      <img src="produk-pasport.jpeg" alt="Paspor">
+    </div>
+    <h3>Paspor</h3>
+    <button onclick="orderWA('Paspor')">Konsultasi Paspor</button>
+  </div>
 
-<div class="card">
-      <div class="img">
-        <img src="produk-ktp.jpeg" alt="KTP (Pendampingan)">
-      </div>
-      <h3>KTP (Pendampingan)</h3>
-      <label class="produk-check">
-  <input type="checkbox" class="produk" value="KTP" disabled>
-  <span>KTP</span>
-</label>
-<small class="note">* Aktif setelah konsultasi</small> 
-      </div>
+  <div class="card">
+    <div class="img">
+      <img src="produk-ktp.jpeg" alt="KTP">
+    </div>
+    <h3>KTP</h3>
+    <button onclick="orderWA('KTP')">Konsultasi KTP</button>
+  </div>
 
-<div class="card">
-      <div class="img">
-        <img src="produk-stnk.jpeg" alt="STNK (Pendampingan)">
-      </div>
-      <h3>STNK (Pendampingan)</h3>
-      <label class="produk-check">
-  <input type="checkbox" class="produk" value="STNK" disabled>
-  <span>STNK</span>
-</label>
-<small class="note">* Aktif setelah konsultasi</small>   
-      </div>
+  <div class="card">
+    <div class="img">
+      <img src="produk-stnk.jpeg" alt="STNK">
+    </div>
+    <h3>STNK</h3>
+    <button onclick="orderWA('STNK')">Konsultasi STNK</button>
+  </div>
 
-<div class="card">
-      <div class="img">
-        <img src="produk-kitas.jpeg" alt="KITAS/KITAP (Pendampingan)">
-      </div>
-      <h3>KITAS/KITAP (Pendampingan)</h3>
-      <label class="produk-check">
-  <input type="checkbox" class="produk" value="KITAS/KITAP" disabled>
-  <span>KITAS/KITAP</span>
-</label>
-<small class="note">* Aktif setelah konsultasi</small> 
-      </div>
+  <div class="card">
+    <div class="img">
+      <img src="produk-kitas.jpeg" alt="KITAS / KITAP">
+    </div>
+    <h3>KITAS / KITAP</h3>
+    <button onclick="orderWA('KITAS / KITAP')">Konsultasi KITAS / KITAP</button>
+  </div>
 
-<div class="card">
-      <div class="img">
-        <img src="produk-dokumen.jpeg" alt="Others (Pendampingan)">
-      </div>
-      <h3>Others (Pendampingan)</h3>
-      <label class="produk-check">
-  <input type="checkbox" class="produk" value="Dokumen Lain" disabled>
-  <span>Dokumen Lain</span>
-</label>
-<small class="note">* Aktif setelah konsultasi</small>   
-      </div>
+  <div class="card">
+    <div class="img">
+      <img src="produk-dokumen.jpeg" alt="Dokumen Lain">
+    </div>
+    <h3>Dokumen Lain</h3>
+    <button onclick="orderWA('Dokumen Lain')">Konsultasi Dokumen Lain</button>
+ </div>
 
-</div> <!-- AKHIR DAFTAR PRODUK -->
+</div>
 
-  <!-- TOMBOL GLOBAL LANJUT PROSES -->
-<button id="btn-multi" class="btn-proses" onclick="orderMulti()" disabled>
-   proses sekarang
-</button>
-<small class="note">* Pilih Produk</small>
-
-</div> <!-- AKHIR .container -->
-
-<!-- === CTA FINAL === -->
 <div class="cta-final">
-  <h2>Siap Bantu Layanan Dokumen Tanpa Ribet?</h2>
+  <h2>Siap Urus Dokumen Tanpa Ribet?</h2>
   <p>Konsultasi GRATIS via WhatsApp.</p>
-  <button onclick="orderWAKonsultasi('konsultasi dan ingin melanjutkan proses dokumen')">
-    Lanjutkan Proses Dokumen
-  </button>
-
-<div class="cta-trust">
-    <br>
-    Layanan kami berkembang melalui kepercayaan dan rekomendasi klien.
-  </div>
+  <button onclick="orderWA('konsultasi dokumen')">Chat Sekarang</button>
 </div>
 
-<!-- ⭐ RATING WHATSAPP -->
-<div class="rating-wa">
- <a href="https://wa.me/62895429358977?text=Saya%20ingin%20memberikan%20penilaian%205%20bintang.%20Pelayanannya%20sangat%20baik.%20Terimakasih."
-   target="_blank">
-  ⭐⭐⭐⭐⭐
-</a>
-  <div class="rating-text">Beri Penilaian Layanan Kami</div>
-</div>
-<script>
-// ===============================
-// CALL NOW / KONSULTASI
-// ===============================
-function orderWAKonsultasi(topik) {
-  const nomor = "62895429358977";
-  const pesan = "Halo RIZCH, saya sudah " + topik + ". Terimakasih.";
-  const url = "https://wa.me/" + nomor + "?text=" + encodeURIComponent(pesan);
+<footer>
+  <strong>Jam Operasional:</strong><br>
+  Senin–Sabtu | 08.00–20.00 WITA<br><br>
 
-  // Aktifkan semua checkbox produk setelah konsultasi
-  document.querySelectorAll('.produk').forEach(function(cb) {
-    cb.disabled = false;
-  });
+  RIZCH adalah penyedia layanan pendampingan administrasi.<br>
+  Kami bukan instansi pemerintah.<br><br>
 
-  window.open(url, "_blank");
-}
-
-// ===============================
-// LANJUT PROSES (MULTI PRODUK)
-// ===============================
-function orderMulti() {
-  const nomor = "62895429358977";
-  const selected = [];
-
-  document.querySelectorAll('.produk:checked').forEach(function(cb) {
-    selected.push(cb.value);
-  });
-
-  // Jika belum pilih produk → STOP
-  if (selected.length === 0) {
-    alert("Silakan pilih minimal 1 produk.");
-    return;
-  }
-
-  const pesan =
-`Halo RIZCH, 
-Tolong proses untuk:
-• ${selected.join("\n• ")}
-
-Mohon info pembayaran. Terimakasih.`;
-
-  const url = "https://wa.me/" + nomor + "?text=" + encodeURIComponent(pesan);
-  window.open(url, "_blank");
-}
-
-// ===============================
-// AKTIFKAN TOMBOL JIKA ADA PILIHAN
-// ===============================
-document.querySelectorAll('.produk').forEach(function(cb) {
-  cb.addEventListener('change', function() {
-    const adaPilihan = document.querySelectorAll('.produk:checked').length > 0;
-    document.getElementById('btn-multi').disabled = !adaPilihan;
-  });
-});
-</script>
-<!-- ================= FOOTER PROFESIONAL ================= -->
-<footer style="
-  background:#faf7f7;
-  border-top:1px solid #eee;
-  margin-top:40px;
-  padding:28px 16px;
-  text-align:center;
-  font-size:14px;
-  color:#555;
-  line-height:1.7;
-">
-
-  <!-- JAM OPERASIONAL -->
-  <div style="margin-bottom:16px;">
-    <strong>Jam Operasional</strong><br>
-    Senin–Sabtu | 08.00–20.00 WITA
-  </div>
-
-  <!-- TEKS LEGAL -->
-  <div style="
-    max-width:900px;
-    margin:0 auto 16px;
-    font-size:13px;
-    color:#666;
-  ">
-    <strong>Catatan Penting:</strong><br>
-    RIZCH merupakan penyedia layanan pendampingan dan konsultasi administrasi.<br>
-    Kami bukan instansi pemerintah.<br>
-   🔒 Privasi klien kami jaga. Proses Resmi & Data Terjamin Aman.
-  </div>
-
-  <!-- COPYRIGHT -->
-  <div style="
-    font-size:12px;
-    color:#888;
-  ">
-    © 2026 RIZCH - Denpasar. All rights reserved.
-  </div>
-
+  © 2026 RIZCH - Denpasar
 </footer>
-<!-- ================= END FOOTER ================= -->
+
+<script>
+function orderWA(layanan) {
+  const nomor = "62895429358977";
+  const pesan = `Halo RIZCH, saya ingin konsultasi terkait ${layanan}. Mohon informasinya. Terimakasih.`;
+  window.open("https://wa.me/" + nomor + "?text=" + encodeURIComponent(pesan), "_blank");
+}
+
+</script>
+
+<a href="https://wa.me/62895429358977?text=Halo%20RIZCH,%20saya%20ingin%20konsultasi."
+   class="wa-floating" target="_blank">
+   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" 
+        alt="WhatsApp" width="28">
+</a>
+
 </body>
+
 </html>
