@@ -474,14 +474,18 @@ font-size:13px;
   align-items: stretch;
 }
 
-.trust-item {
+..trust-item {
   background: white;
   padding: 25px 20px;
   border-radius: 16px;
   text-align: center;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   transition: transform 0.3s ease;
-  height:100%;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  min-height:170px;
 }
 
 .trust-item:hover {
