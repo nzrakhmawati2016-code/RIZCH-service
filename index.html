@@ -66,8 +66,7 @@ content="Biro Jasa Dokumen Bali: Pengurusan SIM, SKCK, KITAS/KITAP, KTP, STNK da
     "https://www.facebook.com/rizchpendampingandokumenpribadi"
   ]
 }
-</script>
-
+ </script>
 <style>
 /* Reset & Base */
 *, *::before, *::after {
@@ -425,7 +424,8 @@ font-size:13px;
   display:flex;
   flex-direction:column;
   justify-content:center;
-  min-height:170px;
+  min-height:200px;
+  align-items:center;
 }
 
 .trust-item:hover {
@@ -1142,21 +1142,6 @@ h2{
 }
 
 /* SPLIT SECTION */
-.split-section{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  align-items:center;
-  gap:50px;
-  margin:100px 0;
-}
-
-.split-section.reverse{
-  direction:rtl;
-}
-
-.split-section.reverse .split-text{
-  direction:ltr;
-}
 
 .split-img img{
   width:100%;
@@ -1172,11 +1157,47 @@ h2{
   color:#666;
   font-size:16px;
 }
+.split{
+  display:flex;
+  align-items:center;
+  gap:50px;
+  justify-content:space-between;
+  margin:80px 0;
+}
+
+.split-img{
+  flex:1;
+}
+
+.split-img img{
+  width:100%;
+  height:280px;
+  object-fit:cover;
+  border-radius:18px;
+}
+
+.split-text{
+  flex:1;
+  max-width:520px;
+}
+
+@media(max-width:768px){
+  .split{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .split-img img{
+    height:220px;
+  }
+}
+
 .trust-grid .trust-item:last-child{
   grid-column: 1 / -1;
   justify-self: center;
   max-width:300px;
 }
+
 /* ===== FIX FINAL ARTIKEL ===== */
 
 .artikel-wrapper{
@@ -1211,8 +1232,8 @@ h2{
   display:inline-block;
   margin-top:10px;
   padding:10px 20px;
-  background:#1e40af;
-  color:#fff;
+  background:transparent;
+  color:#1e40af;
   border-radius:30px;
   text-decoration:none;
 }
@@ -1224,7 +1245,56 @@ h2{
 .testimonial-item{
   box-shadow:0 10px 30px rgba(0,0,0,0.06);
 }
+/* BUTTON ARTICLE PREMIUM */
+.btn-link{
+  color:#1d4ed8;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:500;
+  position:relative;
+  display:inline-block;
+  margin-top:10px;
+}
 
+.btn-link::after{
+  content:" →";
+  transition:0.3s;
+}
+
+.btn-link:hover{
+  opacity:0.7;
+}
+
+.btn-link:hover::after{
+  margin-left:6px;
+}
+
+.split{
+  display:flex !important;
+  align-items:center;
+  gap:50px;
+}
+
+.split-img{
+  flex:1;
+}
+
+.split-text{
+  flex:1;
+}
+
+.split-img img{
+  width:100%;
+  height:280px;
+  object-fit:cover;
+  border-radius:18px;
+}
+@media(max-width:768px){
+  .split{
+    flex-direction:column !important;
+    text-align:center;
+  }
+}
 </style>
 </head>
 
@@ -1246,7 +1316,7 @@ h2{
   </div>
 
   <div class="nav-menu">
-    <a href="#">Home</a
+    <a href="#">Home</a>
     <a href="#">Layanan</a>
     <a href="#">Testimoni</a>
     <a href="#artikel">Artikel</a>
@@ -1271,7 +1341,7 @@ h2{
     Rizch Service
     </h2>
     <p>
-    Jasa Pengurusan SIM, SKCK, KITAS, KTP, STNK & Paspor tanpa ribet.  
+    Urus SIM, SKCK, KITAS, KTP, STNK & Paspor tanpa ribet.  
     Didampingi sampai selesai dengan proses jelas & aman.
     </p>
 
@@ -1441,7 +1511,9 @@ h2{
   <img src="testimoni-wa2.jpg" alt="Testimoni WA 2" loading="lazy">
   <img src="testimoni-wa3.jpg" alt="Testimoni WA 3" loading="lazy">
 </div>
-<section class="split-section reverse">
+<section>
+
+  <div class="split">
 
   <div class="split-img">
     <img src="dokumen-aman.jpg" alt="Dokumen Aman dan Resmi">
@@ -1486,7 +1558,7 @@ Melalui panduan ini, Anda akan memahami gambaran proses secara lebih jelas agar 
 </p>
 
         
-        <a href="artikel-panduan.html" class="btn-artikel">Baca Selengkapnya</a>
+        <a href="artikel-panduan.html" class="btn-artikel">Explore</a>
       </div>
     </div>
 
@@ -1500,10 +1572,13 @@ Melalui panduan ini, Anda akan memahami gambaran proses secara lebih jelas agar 
         <div>
           <h3>Perbedaan SIM Lokal & Internasional</h3>
           <p>
-            SIM internasional diperlukan untuk berkendara di luar negeri dan memiliki aturan berbeda dengan SIM lokal. 
-            Banyak orang belum memahami perbedaan fungsi, masa berlaku, serta proses pembuatannya.
-          </p>
-          <a href="artikel-sim.html" class="btn-artikel">Baca Selengkapnya</a>
+SIM lokal digunakan untuk berkendara di dalam negeri, sedangkan SIM internasional diperlukan untuk perjalanan ke luar negeri.
+</p>
+
+<p>
+Memahami perbedaannya penting agar Anda tidak mengalami kendala saat berkendara di negara lain.
+</p>
+          <a href="artikel-sim.html" class="btn-artikel">Explore</a>
         </div>
       </div>
 
@@ -1517,7 +1592,7 @@ Melalui panduan ini, Anda akan memahami gambaran proses secara lebih jelas agar 
             Pembuatan paspor memerlukan dokumen lengkap dan prosedur yang tepat. 
             Kesalahan kecil bisa menyebabkan penolakan atau penundaan proses.
           </p>
-          <a href="artikel-paspor.html" class="btn-artikel">Baca Selengkapnya</a>
+          <a href="artikel-paspor.html" class="btn-artikel">Explore</a>
         </div>
       </div>
 
