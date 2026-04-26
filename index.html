@@ -1127,6 +1127,15 @@ section{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:25px;
+
+}
+
+/* ✅ TAMBAHKAN DI SINI */
+@media(max-width:768px){
+  .vehicle-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+  }
 }
 
 .vehicle-card{
