@@ -1037,6 +1037,7 @@ footer a:hover {
 }
 .hero-right{
   max-width:520px;
+  margin:0 auto; /* ✅ TAMBAHAN */
 }
 section{
   margin:80px 0;
@@ -1048,11 +1049,21 @@ section{
 }
 
 @media(max-width:768px){
+
   .hero-split{
     grid-template-columns:1fr;
     text-align:center;
+    padding:120px 20px 40px;
+    min-height:auto; /* ✅ penting */
   }
+
+  .hero-left img{
+    max-width:280px;
+    margin:0 auto;
+  }
+
 }
+
 /* ⬇️ TAMBAHKAN DI SINI */
 .section-title{
   text-align:center;
@@ -1150,14 +1161,14 @@ h2{
 
 .hero-bg-shape{
   position:absolute;
-  left:-150px;
+  left:50%;
   top:50%;
-  transform:translateY(-50%);
-  width:500px;
-  height:500px;
+  transform:translate(-50%, -50%);
+  width:400px;
+  height:400px;
   background:radial-gradient(circle, #1e40af 0%, #1e3a8a 70%);
   border-radius:50%;
-  opacity:0.1;
+  opacity:0.08;
   z-index:0;
 }
 
@@ -1277,6 +1288,9 @@ h2{
 }
 
 .artikel-main img{
+  display:block;        /* ✅ bikin bisa center */
+  margin:0 auto;        /* ✅ center horizontal */
+  max-width:100%;       /* ✅ responsive */
   height:200px;
   border-radius:20px;
 }
@@ -1508,8 +1522,8 @@ footer strong{
     Rizch Service
     </h2>
     <p>
-    Urus dokumen tanpa bingung.  
-    Didampingi dengan solusi yang benar dan tepat hingga proses selesai — jelas, aman, dan legal.
+    Layanan pengurusan dokumen yang jelas dan terarah.  
+    Didampingi dengan solusi yang tepat dan sesuai prosedur, sehingga proses selesai secara aman dan legal.
     </p>
 
     <a href="https://wa.me/62895429358977?text=Halo%20RIZCH"
