@@ -333,9 +333,13 @@ h1, h2, h3, p{
 }
 
 @media(max-width:768px){
+.steps-container {
+grid-template-columns: repeat(3,1fr);   
+gap:10px;                               
+}
 
 .step-card{
-padding:20px;
+padding:18px 12px;    
 }
 
 .step-number{
@@ -345,11 +349,11 @@ font-size:18px;
 }
 
 .step-card h3{
-font-size:16px;
+font-size:15px;       
 }
 
 .step-card p{
-font-size:13px;
+font-size:12px;       
 }
 }
 .step-card {
@@ -413,25 +417,6 @@ font-size:13px;
   }
 }
 
-/* Mobile: Step 3 center */
-@media (max-width: 767px) {
-  .steps-container {
-    grid-template-columns: repeat(3,1fr);
-    gap:10px;
-  }
-
-  .step-card{
-    padding:18px 12px;
-  }
-
-  .step-card h3{
-    font-size:15px;
-  }
-
-  .step-card p{
-    font-size:12px;
-  }
-}
 
 /* TRUST SECTION */
 .trust{
@@ -1405,11 +1390,6 @@ html{
   opacity:0.9;
 }
 
-@media(min-width:768px){
-  .trust-grid{
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
 
 footer strong{
   display:block;
@@ -1418,14 +1398,28 @@ footer strong{
 
 .testi-img{
   width:100%;
-  height:140px;
-  object-fit:cover;
-  border-radius:12px;
+  height:auto; /* ⬅️ WAJIB */
+  object-fit:contain; /* ⬅️ biar tidak kepotong */
+
+  border-radius:14px;
   margin-bottom:12px;
+
+  /* efek real */
+  box-shadow:0 10px 30px rgba(0,0,0,0.15);
+  transform:rotate(-1deg);
+
+  /* biar tidak terlalu "AI bersih" */
+  filter: contrast(1.05) brightness(0.98);
 }
 
+/* variasi biar tidak kaku */
+.testimonial-item:nth-child(even) .testi-img{
+  transform:rotate(1deg);
+}
+
+/* penting supaya shadow tidak kepotong */
 .testimonial-item{
-  overflow:hidden;
+  overflow:visible;
 }
 
 /* NAV DESKTOP */
@@ -1486,7 +1480,7 @@ footer strong{
 <!-- STICKY NAVIGATION -->
 <nav class="sticky-nav" id="stickyNav">
   <div class="nav-left">
-    <img src="logo-rizch.png" class="nav-logo">
+    <img src="logo-rizch.png" class="nav-logo" alt="Logo RIZCH Biro Jasa Dokumen Bali">
   </div>
 
   <div class="menu-toggle" id="menuToggle">☰</div>
@@ -1514,8 +1508,8 @@ footer strong{
     Rizch Service
     </h2>
     <p>
-    Urus dokumen tanpa antre & tanpa bingung.  
-    Didampingi sampai selesai dengan proses jelas, aman, dan legal.
+    Urus dokumen tanpa bingung.  
+    Didampingi dengan solusi yang benar dan tepat hingga proses selesai — jelas, aman, dan legal.
     </p>
 
     <a href="https://wa.me/62895429358977?text=Halo%20RIZCH"
@@ -1598,9 +1592,12 @@ footer strong{
         <h4>Privasi Terjaga</h4>
         <p>Data klien aman & tidak disebarluaskan</p>
       </div>
-   </div> 
-  
-</div>
+   </div>  <!-- trust-item -->
+</div>  <!-- trust-grid -->
+</div>  <!-- trust -->
+
+</div>  <!-- ✅ TAMBAHAN: tutup container -->
+
  
   <!-- PRODUK -->
 <section id="layanan">
@@ -1609,39 +1606,39 @@ footer strong{
 <div class="vehicle-grid">
 
   <div class="vehicle-card">
-    <img src="produk-skck.jpeg" loading="lazy">
+    <img src="produk-skck.jpeg" loading="lazy" alt="Layanan pengurusan SKCK di Bali">
     <h3>SKCK</h3>
     <a href="https://wa.me/62895429358977?text=SKCK">Info Layanan</a>
   </div>
 
   <div class="vehicle-card">
-    <img src="produk-sim.jpeg" loading="lazy">
+    <img src="produk-sim.jpeg" loading="lazy" alt="Jasa pengurusan SIM di Bali cepat dan resmi">
     <h3>SIM</h3>
     <a href="https://wa.me/62895429358977?text=SIM">Info Layanan</a>
   </div>
 
   <div class="vehicle-card">
-    <img src="produk-pasport.jpeg" loading="lazy">
+    <img src="produk-pasport.jpeg" loading="lazy" alt="Jasa pembuatan paspor di Bali proses mudah">
     <h3>Paspor</h3>
     <a href="https://wa.me/62895429358977?text=Paspor">Info Layanan</a>
   </div>
 
   <div class="vehicle-card">
-    <img src="produk-ktp.jpeg" loading="lazy">
+    <img src="produk-ktp.jpeg" loading="lazy" alt="Jasa pengurusan KTP di Bali tanpa ribet">
     <h3>KTP</h3>
     <a href="https://wa.me/62895429358977?text=KTP">Info Layanan</a>
   </div>
 
   <div class="vehicle-card">
-    <img src="produk-stnk.jpeg" loading="lazy">
+    <img src="produk-stnk.jpeg" loading="lazy" alt="Jasa perpanjangan STNK di Bali aman dan legal">
     <h3>STNK</h3>
     <a href="https://wa.me/62895429358977?text=STNK">Info Layanan</a>
   </div>
 
   <div class="vehicle-card">
-    <img src="produk-kitas.jpeg" loading="lazy">
+    <img src="produk-kitas.jpeg" loading="lazy" alt="Jasa pengurusan KITAS dan KITAP di Bali untuk WNA">
     <h3>KITAS / KITAP</h3>
-    <a href="https://wa.me/62895429358977?text=KITAS">Info Layanan</a>
+    <a href="https://wa.me/62895429358977?text=STNK">Info Layanan</a>
   </div>
 
 </div>
@@ -1655,19 +1652,19 @@ footer strong{
   <div class="testimonials-grid">
 
     <div class="testimonial-item">
-      <img src="testi2.jpg" class="testi-img">
+      <img src="testi2.jpg" class="testi-img" loading="lazy" alt="Testimoni pelanggan 1">
     </div>
 
     <div class="testimonial-item">
-      <img src="testi3.jpg" class="testi-img">
+      <img src="testi3.jpg" class="testi-img" loading="lazy" alt="Testimoni pelanggan 2">
     </div>
 
     <div class="testimonial-item">
-      <img src="testi4.jpg" class="testi-img">
+      <img src="testi4.jpg" class="testi-img" loading="lazy" alt="Testimoni pelanggan 3">
     </div>
 
     <div class="testimonial-item">
-      <img src="testi1.jpg" class="testi-img">
+      <img src="testi1.jpg" class="testi-img" loading="lazy" alt="Testimoni pelanggan 4">
     </div>
 
   </div>
@@ -1680,7 +1677,7 @@ footer strong{
   <img src="testimoni-wa2.jpg" alt="Testimoni WA 2" loading="lazy">
   <img src="testimoni-wa3.jpg" alt="Testimoni WA 3" loading="lazy">
 </div>
-<section>
+<section class="split-section">
 
   <div class="split">
 
@@ -2028,9 +2025,9 @@ document.addEventListener("DOMContentLoaded", function(){
 
   if(toggle && menu){
 
+
     toggle.addEventListener('click', function(){
       menu.classList.toggle('active');
-
       if(menu.classList.contains('active')){
         toggle.innerHTML = "✖";
       } else {
@@ -2046,12 +2043,19 @@ document.addEventListener("DOMContentLoaded", function(){
       }
     });
 
+    //TAMBAHAN BARU: Auto-close saat klik link di dalam menu
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.remove('active');
+        toggle.innerHTML = "☰";
+      });
+    });
+
   }
 
-  // 🔥 TAMBAHAN STEP 3
+  // 🔥 TAMBAHAN STEP 3 (TETAP ADA, JANGAN DIHAPUS)
   window.addEventListener('scroll', function(){
     const nav = document.getElementById('stickyNav');
-
     if(nav){
       if(window.scrollY > 50){
         nav.classList.add('scrolled');
