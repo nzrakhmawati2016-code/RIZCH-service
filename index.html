@@ -1031,88 +1031,138 @@ footer a:hover {
 .skip-to-content:focus {
   top: 0;
 }
-/* ⬇️ TAMBAHKAN DI BAWAH SINI */
+/* ================= HERO SECTION FINAL PRO ================= */
 .hero-split{
   display:grid;
   grid-template-columns: 1fr 1fr;
   align-items:center;
-  min-height:80vh;
-  padding:80px 40px;
-  gap:40px;
-  background:#fff;
+  min-height:60vh;
+
+  padding:50px 40px;
+  gap:50px;
+
+  max-width:1200px;      /* 🔥 biar tidak terlalu lebar */
+  margin:0 auto;         /* 🔥 center layout */
+
+  background:linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+
+  position:relative;
+  overflow:hidden;
+}
+
+/* SHAPE KIRI (TETAP HALUS) */
+.hero-split::before{
+  content:"";
+  position:absolute;
+
+  width:420px;
+  height:420px;
+
+  background:linear-gradient(135deg, #4f46e5, #1e40af);
+  border-radius:50%;
+
+  left:-260px;
+  top:55%;
+  transform:translateY(-50%);
+
+  opacity:0.04;
+  z-index:0;
+}
+
+/* 🔥 TAMBAHAN: GLOW HALUS KANAN */
+.hero-split{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  align-items:center;
+
+  padding:70px 40px;
+  gap:50px;
+
+  background:linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+
+  position:relative;
+  overflow:hidden;
+}
+
+/* background shape kiri */
+.hero-split::before{
+  content:"";
+  position:absolute;
+  width:500px;
+  height:500px;
+  background:radial-gradient(circle, #4f46e5, transparent);
+  opacity:0.06;
+  left:-250px;
+  top:50%;
+  transform:translateY(-50%);
+}
+
+/* background kanan */
+.hero-split::after{
+  content:"";
+  position:absolute;
+  width:350px;
+  height:350px;
+  background:radial-gradient(circle, #22c55e, transparent);
+  opacity:0.08;
+  right:-150px;
+  bottom:-100px;
+}
+
+/* konten */
+.hero-left{
+  display:flex;
+  justify-content:center;
+  z-index:2;
 }
 
 .hero-left img{
   width:100%;
+  max-width:520px;
   border-radius:20px;
-  transition:0.4s ease;
+  box-shadow:0 25px 60px rgba(0,0,0,0.15);
 }
-.hero-left img:hover{
-  transform:scale(1.05);
+
+.hero-right{
+  max-width:520px;
+  z-index:2;
 }
+
+/* teks */
 .hero-right h1{
   font-size:42px;
   font-weight:800;
-  color:#0f172a;
   line-height:1.3;
-}
-.hero-right{
-  max-width:520px;
-  margin:0 auto; /* ✅ TAMBAHAN */
-}
-section{
-  margin:80px 0;
-}
-@media(max-width:768px){
-  section{
-    margin:50px 0;
-  }
+  color:#0f172a;
 }
 
 .hero-right p{
   margin-top:15px;
-  color:#555;
+  color:#475569;
+  line-height:1.7;
   font-size:16px;
 }
 
-@media(max-width:768px){
-
-  .hero-split{
-    grid-template-columns:1fr;
-    text-align:center;
-    padding:95px 20px 30px; /* 🔽 lebih padat */
-    min-height:auto;
-    gap:18px;
-  }
-
-  .hero-left img{
-    max-width:240px; /* 🔽 lebih proporsional */
-    margin:0 auto;
-  }
-
-  .hero-right h1{
-    font-size:22px;
-    line-height:1.4;
-  }
-
-  .hero-right h2{
-    font-size:14px;
-  }
-
-  .hero-right p{
-    font-size:14px;
-    line-height:1.6;
-  }
-
+/* tombol */
+.hero-right .cta-wa{
+  margin-top:25px;
+  padding:14px 30px;
+  border-radius:30px;
+  display:inline-block;
 }
+<div class="trust-bar">
+  <div><strong>1500+</strong><br>Klien Dilayani</div>
+  <div><strong>98%</strong><br>Kepuasan</div>
+  <div><strong>5+</strong><br>Tahun Pengalaman</div>
+</div>
 
-/* ⬇️ TAMBAHKAN DI SINI */
+/* ================= SECTION TITLE ================= */
 .section-title{
   text-align:center;
-  font-size:32px;
+  font-size:34px;
   font-weight:700;
-  margin:60px 0 30px;
-
+  margin:70px 0 40px;
+  letter-spacing:-0.3px;
 }
 
 .vehicle-grid{
@@ -1210,18 +1260,6 @@ h2{
   overflow:hidden;
 }
 
-.hero-bg-shape{
-  position:absolute;
-  left:50%;
-  top:50%;
-  transform:translate(-50%, -50%);
-  width:400px;
-  height:400px;
-  background:radial-gradient(circle, #1e40af 0%, #1e3a8a 70%);
-  border-radius:50%;
-  opacity:0.08;
-  z-index:0;
-}
 
 .hero-left,
 .hero-right{
@@ -1334,10 +1372,10 @@ h2{
   border-radius:20px;
 }
 
-.artikel-item{
+.artikel-item{ 
   display:flex;
-  gap:25px;
-  margin-bottom:40px;
+  gap:30px;
+  margin-bottom:70px;
   align-items:center;
 }
 
@@ -1346,14 +1384,26 @@ h2{
 }
 
 .artikel-item img{
-  width:45%;
-  height:160px;
+  width:50%;
+  height:200px;
   object-fit:cover;
   border-radius:16px;
 }
 .artikel-item div{
-  width:55%;
+  width:50%;
+  max-width:420px;
 }
+.artikel-item h3{
+  margin-bottom:10px;
+  line-height:1.4;
+}
+
+.artikel-item p{
+  margin-bottom:15px;
+  line-height:1.6;
+  color:#555;
+}
+
 
 .btn-artikel{
   display:inline-block;
@@ -1411,9 +1461,6 @@ h2{
   border-radius:18px;
 }
 
-.artikel-item{
-  margin-bottom:80px;
-}
 html{
   scroll-behavior:smooth;
 }
@@ -1423,15 +1470,6 @@ img{
   height:auto;
 }
 
-/* ✅ TAMBAHAN BARU */
-@media(max-width:768px){
-  .container img{
-    width:90%;
-    margin:0 auto;
-    display:block;
-    border-radius:12px;
-  }
-}
 
 .btn-tiktok{
   display:inline-block;
@@ -1502,7 +1540,43 @@ footer strong{
   }
 }
 
+/* 🔥 TAMBAHKAN DI SINI */
+@media(max-width:768px){
 
+  .hero-split{
+    display:grid !important;                 /* 🔥 paksa aktif */
+    grid-template-columns:1fr 1fr !important;/* 🔥 paksa 2 kolom */
+    gap:15px;
+    padding:70px 15px 30px;
+    align-items:center;
+  }
+
+  .hero-left{
+    grid-column:1;
+  }
+
+  .hero-right{
+    grid-column:2;
+    text-align:left;
+  }
+
+  .hero-left img{
+    width:100%;
+    max-width:200px;
+  }
+
+  .hero-right h1{
+    font-size:18px;
+    line-height:1.4;
+  }
+
+  .hero-right p{
+    font-size:13px;
+  }
+
+}
+
+/* ⬇️ PENUTUP */
 </style>
 </head>
 
