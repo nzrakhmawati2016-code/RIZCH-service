@@ -638,9 +638,9 @@ font-size:12px;
 
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(4, 1fr); /* desktop */
   gap: 25px;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -1492,8 +1492,11 @@ footer strong{
 
 .testi-img{
   width:100%;
+  max-width:180px;   /* 🔥 TAMBAHKAN INI */
+  margin:0 auto;     /* 🔥 TAMBAHKAN INI */
   height:auto; /* ⬅️ WAJIB */
   object-fit:contain; /* ⬅️ biar tidak kepotong */
+  
 
   border-radius:14px;
   margin-bottom:12px;
@@ -1514,7 +1517,10 @@ footer strong{
 /* penting supaya shadow tidak kepotong */
 .testimonial-item{
   overflow:visible;
+  padding:15px;
+  text-align:center;
 }
+
 
 /* NAV DESKTOP */
 .nav-menu{
@@ -1600,6 +1606,17 @@ footer strong{
 }
 
 /* ⬇️ PENUTUP */
+@media(max-width:768px){
+  .testimonials-grid{
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media(max-width:480px){
+  .testimonials-grid{
+    grid-template-columns: 1fr;
+  }
+}
 </style>
 </head>
 
