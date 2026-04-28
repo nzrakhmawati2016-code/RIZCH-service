@@ -352,10 +352,15 @@ h1, h2, h3, p{
 }
 
 @media(max-width:768px){
-.steps-container {
-grid-template-columns:1fr;   
-gap:15px;                               
- }
+  .steps-container{
+    display:flex;
+    overflow-x:auto;
+    gap:15px;
+  }
+
+  .step-card{
+    min-width:80%;
+  }
 }
 
 .step-card{
@@ -391,13 +396,9 @@ font-size:15px;
 .step-card p{
 font-size:12px;       
 }
-}
-
-
 .step-card:hover {
   transform: translateY(-5px);
 }
-
 .step-number {
   width: 50px;
   height: 50px;
@@ -644,7 +645,7 @@ font-size:12px;
 }
 
 .testimonial-item {
-  background: white;
+  background: transparent;
   padding: 25px 20px;
   border-radius: 16px;
   text-align: center;
@@ -1150,11 +1151,6 @@ footer a:hover {
   border-radius:30px;
   display:inline-block;
 }
-<div class="trust-bar">
-  <div><strong>1500+</strong><br>Klien Dilayani</div>
-  <div><strong>98%</strong><br>Kepuasan</div>
-  <div><strong>5+</strong><br>Tahun Pengalaman</div>
-</div>
 
 /* ================= SECTION TITLE ================= */
 .section-title{
@@ -1576,6 +1572,33 @@ footer strong{
 
 }
 
+/* 🔥 TAMBAHKAN DI SINI */
+.hero-wrapper{
+  position:relative;
+  padding-bottom:0 !important;
+}
+
+.hero-stats{
+  position:relative !important;
+  left:auto !important;
+  bottom:auto !important;
+  transform:none !important;
+  margin-top:40px;
+  width:90%;
+  width:100%;
+
+  z-index:10;
+  }
+}
+
+/* 🔥 TAMBAHKAN DI SINI (PALING BAWAH BANGET) */
+
+
+.stats-bar{
+  box-shadow:0 20px 60px rgba(0,0,0,0.08);
+  border-radius:20px;
+}
+
 /* ⬇️ PENUTUP */
 </style>
 </head>
@@ -1634,10 +1657,10 @@ footer strong{
 </section>
 
 <!-- CONTAINER - DIPINDAHKAN KELUAR DARI HERO -->
-<div class="container">
+<div class="hero-wrapper">
 
   <!-- STATS BAR -->
-  <div class="stats-bar" role="region" aria-label="Statistik layanan">
+  <div class="stats-bar hero-stats" role="region" aria-label="Statistik layanan">
     <div class="stat">
       <span class="stat-number" data-target="1500">0</span>+
       <span class="stat-label">Dokumen Selesai</span>
@@ -1654,7 +1677,8 @@ footer strong{
       <span class="stat-number" data-target="24">0</span>/7
       <span class="stat-label">Jam Layanan</span>
     </div>
-  </div>
+  </div> <!-- stats-bar -->
+</div> <!-- hero-wrapper -->
 
   <!-- 3 LANGKAH PROSES -->
   <div class="steps-section">
@@ -1703,14 +1727,12 @@ footer strong{
       </div>
       <div class="trust-item">
         <span class="trust-icon" aria-hidden="true">🔒</span>
-        <h4>Privasi Terjaga</h4>
-        <p>Data klien aman & tidak disebarluaskan</p>
-      </div>
-   </div>  <!-- trust-item -->
+<h4>Privasi Terjaga</h4>
+<p>Data klien aman & tidak disebarluaskan</p>
+</div>  <!-- trust-item -->
+
 </div>  <!-- trust-grid -->
 </div>  <!-- trust -->
-
-</div>  <!-- ✅ TAMBAHAN: tutup container -->
 
  
   <!-- PRODUK -->
@@ -1769,19 +1791,19 @@ footer strong{
   <div class="testimonials-grid">
 
     <div class="testimonial-item">
-      <img src="testi2.jpg" class="testi-img" loading="lazy" alt="Testimoni pelanggan 1">
+      <img src="testi1.jpg" alt="Testimoni 1">
     </div>
 
     <div class="testimonial-item">
-      <img src="testi3.jpg" class="testi-img" loading="lazy" alt="Testimoni pelanggan 2">
+      <img src="testi2.jpg" alt="Testimoni 2">
     </div>
 
     <div class="testimonial-item">
-      <img src="testi4.jpg" class="testi-img" loading="lazy" alt="Testimoni pelanggan 3">
+      <img src="testi3.jpg" alt="Testimoni 3">
     </div>
 
     <div class="testimonial-item">
-      <img src="testi1.jpg" class="testi-img" loading="lazy" alt="Testimoni pelanggan 4">
+      <img src="testi4.jpg" alt="Testimoni 4">
     </div>
 
   </div>
